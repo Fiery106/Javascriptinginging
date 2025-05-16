@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Partall eller oddetall
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Lorem ipsum dolor sit amet.
+            </h1>
+
+            <input type="number" id="num" required />
+
+
+            <button onclick="checkNum()">
+                Send
+            </button>
+            
+            
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+
+
+            function checkNum() {
+                let num = Number(document.getElementById("num").value);
+
+                if (num) {
+                    if (num % 2 == 0) {
+                        output.innerText = `Tallet ${num} er et partall.`
+                    } else {
+                        output.innerText = `Tallet ${num} er ikke et partall.`
+                    }  
+                }
+            }
+        </script>
+    </body>
+</html>

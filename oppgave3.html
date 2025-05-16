@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Partall eller oddetall
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Lorem ipsum dolor sit amet.
+            </h1>
+
+            <input type="text" id="month" required />
+
+
+            <button onclick="checkDays()">
+                Send
+            </button>
+            
+            
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+
+            function checkDays() {
+                let month = document.getElementById("month").value;
+                
+
+                if (month) {
+                    switch (month) {
+                        case month = "januar":
+                            writeOutput(month, 31)
+                            break;
+                        case month = "februar":
+                            writeOutput(month, 28)
+                            break;
+                        case month = "mars":
+                            writeOutput(month, 31)
+                            break;
+                        case month = "april":
+                            writeOutput(month, 30)
+                            break;
+                        case month = "mai":
+                            writeOutput(month, 31)
+                            break;
+                        case month = "juni":
+                            writeOutput(month, 30)
+                            break;
+                        case month = "juli":
+                            writeOutput(month, 31)
+                            break;
+                        case month = "august":
+                            writeOutput(month, 31)
+                            break;
+                        case month = "september":
+                            writeOutput(month, 30)
+                            break;
+                        case month = "oktober":
+                            writeOutput(month, 31)
+                            break;
+                        case month = "november":
+                            writeOutput(month, 30)
+                            break;
+                        case month = "desember":
+                            writeOutput(month, 31)
+                            break;
+                        default:
+                            output.innerText = "Ingen verdi!"
+                    }
+                }
+            }
+
+
+            function writeOutput(x, y) {
+                return output.innerText = `I måned ${x} er det ${y} dager.`
+            }
+        </script>
+    </body>
+</html>

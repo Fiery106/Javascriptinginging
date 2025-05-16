@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Partall eller oddetall
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Lorem ipsum dolor sit amet.
+            </h1>
+
+            <input type="number" id="num1" required />
+
+            <input type="number" id="num2" required />
+
+
+            <button onclick="checkNums()">
+                Send
+            </button>
+            
+            
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+
+            function checkNums() {
+                let num1 = Number(document.getElementById("num1").value);
+                let num2 = Number(document.getElementById("num2").value);
+
+                if (num1 && num2) {
+                    if (num1 > num2) {
+                        output.innerText = `Tallet ${num1} er større enn tallet ${num2}.`
+                    } else if (num1 < num2) {
+                        output.innerText = `Tallet ${num2} er større enn tallet ${num1}.`
+                    } else {
+                        output.innerText = `Tallene ${num1} og ${num2} er like store.`
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
