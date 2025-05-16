@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Gjennomsnittsberegning
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <h1>
+                Lorem ipsum dolor sit amet.
+            </h1>
+
+            <input type="number" id="num" required />
+
+
+            <button onclick="addNums()">
+                Send
+            </button>
+            
+            
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+            let output = document.getElementById("output");
+            let array = [];
+
+
+            function addNums() {
+                let num = Number(document.getElementById("num").value);
+
+                let text = "";
+                let sum = 0;
+
+                
+                if (num) {
+                    array.unshift(num);
+                    
+                    for (i = 0; i < array.length; i++) {
+                        text += `<li> ${array[i]} </li>`
+                        sum += array[i]
+                    } sum /= array.length
+
+                    writeOutput(text, sum)
+                }
+            }
+
+
+            function writeOutput(x, y) {
+                output.innerHTML = `<p> Du har skrevet inn tallene: </p> <ol> 
+                    ${x} 
+                        </ol>
+                    <p> Gjennomsnittet er ${y.toFixed(2)} </p> `
+            }
+        </script>
+    </body>
+</html>
