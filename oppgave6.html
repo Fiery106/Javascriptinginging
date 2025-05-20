@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Table utvidet
+        </title>
+    </head>
+
+
+
+    <body>
+        <div>
+            <button onclick="makeTable2()">
+                Lag tabell
+            </button>
+
+
+            <div id="output"></div>
+        </div>
+
+
+        <script>
+            let personer = ["Ole", "Dole", "Doffen", "Donald", "Dolly"];
+            let output = document.getElementById("output");
+
+            let start = `<thead>
+                            <tr>
+                                <th> Innbygger </th>
+                                <th> Navn </th>
+                            </tr>
+                        </thead>`
+
+
+            function makeTable2() {
+                let x = "";
+
+                for (i = 0; i < personer.length; i++) {
+                    x += `<tr> <td> ${i + 1} </td> <td> ${personer[i]} </td> </tr>`
+                }
+
+                output.innerHTML = `<table> ${start} <tbody> ${x} </tbody> </table>`
+            }
+        </script>
+    </body>
+</html>
