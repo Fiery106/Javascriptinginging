@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Konstruere html-elementer i JS-kode
+        </title>
+    </head>
+
+
+    <body>
+        <div>
+            <button onclick="makeTable()">
+                Lag tabell
+            </button>
+
+
+            <div id="output"></div>
+        </div>
+
+
+        <script>
+            let personer = ["Ole", "Dole", "Doffen", "Donald", "Dolly"];
+            let output = document.getElementById("output");
+
+
+            function makeTable() {
+                let x = "";
+
+                for (i = 0; i < personer.length; i++) {
+                    x += `<li> ${personer[i]} </li>` 
+                }
+
+                output.innerHTML = `<ol> ${x} </ol>`
+            }
+        </script>
+    </body>
+</html>
